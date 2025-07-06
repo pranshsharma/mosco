@@ -6,7 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoDrive - Online Vehicle Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            color: #1e3a8a;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: #e0e0e0;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d0d0d0;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1610642416846-71c7d43df0c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .vehicles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .vehicle-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .vehicle-card h3 {
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+
+        .vehicle-card button {
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .vehicle-card button:hover {
+            background-color: #163378;
+        }
+
+        footer {
+            background-color: white;
+            color: #1e3a8a;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #163378;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,12 +202,12 @@
                 <button onclick="alert('You selected Hyper Car!')">View Details</button>
             </div>
             <div class="vehicle-card">
-                <img src="download1.jpg" alt="Bike">
+                <img src="https://images.unsplash.com/photo-1600185365311-280e4a09fabe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Bike">
                 <h3>Sport Bike</h3>
                 <button onclick="alert('You selected Sport Bike!')">View Details</button>
             </div>
             <div class="vehicle-card">
-                <img src="images.jpg" alt="SUV">
+                <img src="https://images.unsplash.com/photo-1619546813926-8978db4e1db6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="SUV">
                 <h3>Family SUV</h3>
                 <button onclick="alert('You selected Family SUV!')">View Details</button>
             </div>
